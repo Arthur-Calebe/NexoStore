@@ -85,6 +85,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (document.querySelector('.products-page')) initProductsPage();
   if (document.querySelector('.cart-page')) initCartPage();
+
+  // Menu hambúrguer
+const hamburger = document.querySelector('.nav__hamburger');
+const navLinks  = document.querySelector('.nav__links');
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.querySelector('i').className = isOpen ? 'ph ph-x' : 'ph ph-list';
+  });
+
+  // Fecha ao clicar em qualquer link
+  navLinks.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      hamburger.querySelector('i').className = 'ph ph-list';
+    });
+  });
+}
 });
 
 /* =============================================

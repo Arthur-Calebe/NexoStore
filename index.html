@@ -30,16 +30,22 @@
         NEXO<span>Store</span>
       </a>
 
-      <ul class="nav__links" role="list">
+      <ul class="nav__links" id="navLinks" role="list">
         <li><a href="index.html" class="nav__link" aria-current="page">Início</a></li>
         <li><a href="pages/produtos.html" class="nav__link">Produtos</a></li>
         <li><a href="pages/carrinho.html" class="nav__link">Carrinho</a></li>
       </ul>
 
-      <a href="pages/carrinho.html" class="nav__cart-btn" aria-label="Carrinho de compras">
-        <i class="ph ph-shopping-cart-simple"></i>
-        <span class="nav__cart-badge" aria-live="polite" aria-label="Itens no carrinho"></span>
-      </a>
+      <div class="nav__right">
+        <a href="pages/carrinho.html" class="nav__cart-btn" aria-label="Carrinho de compras">
+          <i class="ph ph-shopping-cart-simple"></i>
+          <span class="nav__cart-badge" aria-live="polite" aria-label="Itens no carrinho"></span>
+        </a>
+
+        <button class="nav__hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
