@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NEXO Store — Carrinho de compras. Revise e finalize seus produtos selecionados." />
+  <title>NEXO Store — Carrinho</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="NEXO Store — Página inicial">
+        <div class="nav__logo-icon" aria-hidden="true"><i class="ph-fill ph-lightning"></i></div>
+        NEXO<span>Store</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="../index.html" class="nav__link">Início</a></li>
+        <li><a href="produtos.html" class="nav__link">Produtos</a></li>
+        <li><a href="carrinho.html" class="nav__link" aria-current="page">Carrinho</a></li>
+      </ul>
+
+      <a href="carrinho.html" class="nav__cart-btn" aria-label="Carrinho de compras">
+        <i class="ph ph-shopping-cart-simple"></i>
+        <span class="nav__cart-badge" aria-live="polite" aria-label="Itens no carrinho"></span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="cart-page">
+
+      <header class="cart-page__header">
+        <h1 class="cart-page__title">Seu Carrinho</h1>
+        <p class="cart-page__count" aria-live="polite">0 itens no carrinho</p>
+      </header>
+
+      <section id="cartEmpty" class="cart-empty hidden" aria-label="Carrinho vazio">
+        <i class="ph ph-shopping-cart cart-empty__icon" aria-hidden="true"></i>
+        <h2 class="cart-empty__title">Seu carrinho está vazio</h2>
+        <p class="cart-empty__sub">Explore nossa galeria e adicione produtos que você amar.</p>
+        <a href="produtos.html" class="btn-shop">
+          <i class="ph ph-sparkle" aria-hidden="true"></i> Ver produtos
+        </a>
+      </section>
+
+      <section id="cartItems" class="cart-items hidden" aria-label="Itens no carrinho" aria-live="polite"></section>
+
+      <aside id="cartSummary" class="cart-summary hidden" aria-label="Resumo do pedido">
+        <h2 class="cart-summary__title">Resumo do pedido</h2>
+
+        <div class="cart-summary__row">
+          <span>Subtotal</span>
+          <span id="summarySubtotal">$0.00</span>
+        </div>
+        <div class="cart-summary__row">
+          <span>Frete</span>
+          <span id="summaryShipping">—</span>
+        </div>
+
+        <hr class="cart-summary__divider" />
+
+        <div class="cart-summary__total-row">
+          <span class="cart-summary__total-label">Total</span>
+          <span class="cart-summary__total-value" id="summaryTotal">$0.00</span>
+        </div>
+
+        <p style="font-size:.75rem;color:var(--text-muted);margin-top:.5rem;">
+          <i class="ph-fill ph-info"></i> Frete grátis em compras acima de $500.
+        </p>
+
+        <button id="checkoutBtn" class="btn-checkout" type="button">
+          <i class="ph ph-credit-card" aria-hidden="true"></i> Finalizar compra
+        </button>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <div class="footer__logo-icon" aria-hidden="true"><i class="ph-fill ph-lightning"></i></div>
+        NEXO Store
+      </div>
+      <nav aria-label="Redes sociais">
+        <ul class="footer__social" role="list">
+          <li><a href="https://instagram.com" class="footer__social-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-instagram-logo"></i></a></li>
+          <li><a href="https://twitter.com" class="footer__social-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-x-logo"></i></a></li>
+          <li><a href="https://tiktok.com" class="footer__social-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-tiktok-logo"></i></a></li>
+        </ul>
+      </nav>
+      <p class="footer__copy">© 2026 NEXO Store. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div id="purchaseModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <i class="ph-fill ph-check-circle modal__icon" aria-hidden="true" style="color: var(--accent);"></i>
+      <h2 class="modal__title" id="modalTitle">Pedido realizado!</h2>
+      <p class="modal__body">Obrigado por comprar na NEXO Store. Seu total foi:</p>
+      <p class="modal__total" id="modalTotal" aria-live="polite">$0.00</p>
+      <p id="modalShippingNote" class="modal__shipping-note free"></p>
+      <button id="modalClose" class="modal__close" type="button">Voltar para a loja</button>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NEXO Store — O futuro do seu estilo começa aqui. Tecnologia, lifestyle e muito mais." />
+  <title>NEXO Store — Início</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link
+    rel="preload"
+    as="image"
+    href="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1920&q=85&auto=format&fit=crop"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="NEXO Store — Página inicial">
+        <div class="nav__logo-icon" aria-hidden="true"><i class="ph-fill ph-lightning"></i></div>
+        NEXO<span>Store</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link" aria-current="page">Início</a></li>
+        <li><a href="pages/produtos.html" class="nav__link">Produtos</a></li>
+        <li><a href="pages/carrinho.html" class="nav__link">Carrinho</a></li>
+      </ul>
+
+      <a href="pages/carrinho.html" class="nav__cart-btn" aria-label="Carrinho de compras">
+        <i class="ph ph-shopping-cart-simple"></i>
+        <span class="nav__cart-badge" aria-live="polite" aria-label="Itens no carrinho"></span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <section class="hero" aria-labelledby="hero-headline">
+      <div class="hero__bg" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1920&q=85&auto=format&fit=crop"
+          srcset="
+            https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=768&q=80&auto=format&fit=crop 768w,
+            https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1280&q=85&auto=format&fit=crop 1280w,
+            https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1920&q=85&auto=format&fit=crop 1920w
+          "
+          sizes="100vw"
+          alt=""
+          fetchpriority="high"
+          decoding="auto"
+          width="1920"
+          height="1080"
+        />
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--a" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--b" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow" aria-hidden="true">Nova coleção 2026</p>
+
+        <h1 class="hero__headline" id="hero-headline">
+          O futuro do seu<br /><em>estilo começa</em><br />aqui.
+        </h1>
+
+        <p class="hero__sub">
+          Curadoria de produtos tech, lifestyle e muito mais —
+          selecionados para quem vive no ritmo do futuro.
+        </p>
+
+        <a href="pages/produtos.html" class="hero__cta">
+          Explorar produtos
+          <i class="ph ph-arrow-right hero__cta-arrow" aria-hidden="true"></i>
+        </a>
+
+        <ul class="hero__features" role="list" aria-label="Diferenciais">
+          <li class="hero__feature">
+            <i class="ph-fill ph-check-circle hero__feature-icon" aria-hidden="true"></i>
+            Frete grátis acima de $500
+          </li>
+          <li class="hero__feature">
+            <i class="ph-fill ph-check-circle hero__feature-icon" aria-hidden="true"></i>
+            +100 produtos disponíveis
+          </li>
+          <li class="hero__feature">
+            <i class="ph-fill ph-check-circle hero__feature-icon" aria-hidden="true"></i>
+            Pagamento seguro
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <div class="footer__logo-icon" aria-hidden="true"><i class="ph-fill ph-lightning"></i></div>
+        NEXO Store
+      </div>
+
+      <nav aria-label="Redes sociais">
+        <ul class="footer__social" role="list">
+          <li>
+            <a href="https://instagram.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="ph ph-instagram-logo"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+              <i class="ph ph-x-logo"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://tiktok.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <i class="ph ph-tiktok-logo"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="footer__copy">© 2026 NEXO Store. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
